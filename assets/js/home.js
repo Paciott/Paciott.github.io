@@ -1,7 +1,6 @@
 // TARGET ELEMENTS OF HTML
 
 const header = document.querySelector('header');
-const backUp = document.querySelector('.back-up');
 const technologies = document.querySelector('.technologies');
 const frontendBtn = document.querySelector('.frontend-btn');
 const backendBtn = document.querySelector('.backend-btn');
@@ -13,8 +12,6 @@ let otherTechnologies = document.querySelectorAll('.other');
 
 // ADD EVENT LISTENERS TO TARGETED ELEMENTS
 window.addEventListener("scroll", changeColor);
-window.addEventListener("scroll", toggleBackUp);
-backUp.addEventListener("click", scrollToTop);
 frontendBtn.addEventListener("click", sortFrontendTechnologies);
 backendBtn.addEventListener("click", sortBackendTechnologies);
 otherBtn.addEventListener("click", sortOtherTechnologies);
@@ -25,26 +22,11 @@ allBtn.addEventListener("click", showAllTechnologies);
 function changeColor() {
   // check for window scroll, at >500 change header background color
   let y = window.scrollY;
-  if (y > 500) {
+  if (y > 100) {
     document.querySelector("header").style.backgroundColor = 'rgb(41, 41, 41)';
   } else {
     document.querySelector("header").style.backgroundColor = "unset";
   }
-};
-
-function toggleBackUp() {
-  // check for window scroll, at >500 make the back up button to pop up
-  let y = window.scrollY;
-  if (y > 500) {
-    document.querySelector(".back-up").classList.remove('disabled');
-  } else {
-    document.querySelector(".back-up").classList.add('disabled');
-  }
-};
-
-function scrollToTop() {
-  // scroll to top page
-  window.scroll(0, 0)
 };
 
 function sortFrontendTechnologies() {

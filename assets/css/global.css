@@ -26,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Playfair', sans-serif;
+  font-family: 'Playfair', serif;
   background-color: var(--white);
   color: var(--cool-gray);
 }
@@ -105,24 +105,52 @@ footer p a:hover {
   padding: .2rem;
 }
 
+/* back up button styling */
+.back-up {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  border: 2px solid var(--cool-gray);
+  padding: 1rem;
+  font-size: 1.4rem;
+  transition: 150ms all ease-in;
+  background-color: var(--white);
+}
+
+.back-up:hover {
+  background-color: var(--honeysuckle);
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* disabled feature, used to control what to display */
+.disabled {
+  display: none;
+}
+
 /* header adjustments for mobile layout */
-@media(max-width: 652px) {
+@media(max-width: 670px) {
+  header {
+    display: block;
+  }
+
   header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     padding: 1rem 0 0;
+    margin: .7rem 0;
   }
 
   .nav-links {
     display: flex;
   }
 
-  .nav-links a{
-    font-size: .8rem;
+  .nav-links a {
     padding: .2rem;
     margin: .3rem;
+    font-size: 1.3rem;
 
   }
 }

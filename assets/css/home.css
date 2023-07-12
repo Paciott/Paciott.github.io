@@ -49,7 +49,7 @@ main {
 
 #about-me p {
   font-size: 1.3rem;
-  padding: .2rem 0;
+  padding: .5rem 0;
 }
 
 .background, .skills {
@@ -71,6 +71,7 @@ main {
   line-height: 1.5rem;
   padding: 1rem 0;
   font-size: 1.3rem;
+  line-height: 2rem;
 }
 
 .skills {
@@ -124,30 +125,18 @@ main {
   transform: scale(1.1);
 }
 
-.back-up {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
-  border: 2px solid var(--cool-gray);
-  padding: 1rem;
-  font-size: 1.4rem;
-  transition: 150ms all ease-in;
+@media(max-width: 1200px) {
+  .background p, .skills p {
+    width: 75%;
+  }
 }
 
-.back-up:hover {
-  background-color: var(--honeysuckle);
-  color: var(--white);
-  cursor: pointer;
-}
+@media(max-width: 670px) {
 
-.disabled {
-  display: none;
-}
-
-@media(max-width: 550px) {
   .internal-links {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
 
   .background p, .skills p, .background h3, .skills h3, .technologies {
