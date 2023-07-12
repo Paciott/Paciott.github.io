@@ -1,0 +1,156 @@
+/* index requires more header settings for background transparent feature */
+header {
+  background-color: transparent;
+  transition: all 300ms ease-in;
+}
+
+main {
+  flex: 1;
+}
+
+.first-presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 12rem 3rem ;
+  text-align: center;
+  background-image: url('/assets/img/background-presentation1.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--white);
+}
+
+.hero-name {
+  padding: .3rem;
+  background-color: var(--honeysuckle);
+  transition: 150ms all ease-in;
+  
+}
+
+.first-presentation p {
+  margin: 2rem 0;
+}
+
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+#about-me h2 {
+  font-size: 3rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--honeysuckle);
+  margin-bottom: 2rem;
+}
+
+#about-me p {
+  font-size: 1.3rem;
+  padding: .2rem 0;
+}
+
+.background, .skills {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 2rem 0;
+}
+
+.background h3, .skills h3 {
+  width: 50%;
+  text-align: end;
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--cool-gray);
+}
+
+.background p, .skills p {
+  width: 50%;
+  line-height: 1.5rem;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.skills {
+  align-items: start;
+}
+
+.skills h3 {
+  text-align: start;
+}
+
+.technologies-filter button{
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: .2rem .3rem;
+  margin: 0 .3rem;
+  color: var(--honeysuckle);
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: 150ms all ease-in;
+}
+
+.technologies-filter button:hover {
+  background-color: var(--cool-gray);
+  color: var(--white);
+}
+
+.technologies-filter button:focus {
+  background-color: var(--cool-gray);
+  color: var(--white);
+  text-decoration: underline var(--white);
+}
+
+.technologies {
+  list-style-type: none;
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.technologies li {
+  border: 1px solid black;
+  padding: .8rem;
+  margin: .3rem;
+  transition: 150ms all ease-in-out;
+  background-color: var(--white);
+}
+
+.technologies li:hover {
+  transform: scale(1.1);
+}
+
+.back-up {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  border: 2px solid var(--cool-gray);
+  padding: 1rem;
+  font-size: 1.4rem;
+  transition: 150ms all ease-in;
+}
+
+.back-up:hover {
+  background-color: var(--honeysuckle);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
+}
+
+@media(max-width: 550px) {
+  .internal-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .background p, .skills p, .background h3, .skills h3, .technologies {
+    width: 100%;
+  }
+}
