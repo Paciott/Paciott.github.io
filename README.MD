@@ -2,4 +2,4 @@
 
 The goal is building your Portfolio website using HTML and CSS
 
-[Link to the Portfolio](https://paciott.github.io/Basic-todo-list/)
+[Link to the Portfolio](https://paciott.github.io/)
